@@ -16,6 +16,7 @@ module.exports = {
         .selectAccount('0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c') // this account will be used for this test suite
         .click('div[class^="cardContainer"] i[class^="arrow"]')
         .click('#runTabView .runtransaction')
+        .pause(5000)
         .waitForElementPresent('.instance:nth-of-type(2)')
         .click('.instance:nth-of-type(2) > div > button')
         .waitForElementPresent('.instance:nth-of-type(3)')
@@ -23,7 +24,6 @@ module.exports = {
         .clickFunction('getInt - call')
         .clickFunction('getAddress - call')
         .clickFunction('getFromLib - call')
-        .pause(5000)
         .waitForElementPresent('div[class^="contractActionsContainer"] div[class^="value"] ul')
         .getAddressAtPosition(1, (address) => {
           console.log('Test Recorder ' + address)
