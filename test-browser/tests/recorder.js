@@ -23,6 +23,7 @@ module.exports = {
         .clickFunction('getInt - call')
         .clickFunction('getAddress - call')
         .clickFunction('getFromLib - call')
+        .pause(5000)
         .waitForElementPresent('div[class^="contractActionsContainer"] div[class^="value"] ul')
         .getAddressAtPosition(1, (address) => {
           console.log('Test Recorder ' + address)
